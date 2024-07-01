@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Microsoft Assistance</title>
+</head>
+<body>
+<h1> Microsoft Assistance</h1>
+<p> Please select the app you need help with </p>
+<br>
+<button class="button" onclick="MSWord()"> Microsoft Word </button>
+<button class="button" onclick="MSExcel()"> Microsoft Excel </button>
+<button class="button" onclick="MSPowerPoint()"> Microsoft Power Point </button>
+
+
+<script>
+    function MSWord() {
+        window.location.href = "/microsoft/word";
+    }
+    function MSExcel() {
+        alert("EXCEL");
+    }
+    function MSPowerPoint() {
+        alert("PowePoint");
+    }
+</script>
+</body>
+</html>
