@@ -5,7 +5,16 @@ body {
     text-align: center;
 }
 
+body {
+  background-image: url('img_bg.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
 .button {
+  background-color: #f44336;
+  border-radius: 50px;
   border: none;
   color: black;
   padding: 15px 32px;
@@ -19,6 +28,7 @@ body {
 
 h1 {
     color: #333;
+    background-color: #000;
 }
 
 form {
