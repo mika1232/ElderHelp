@@ -38,6 +38,37 @@
             alert('IDK');
         }
     </script>
+
+    <! SHORTCUTS>
+    <br><br>
+    <h1> Common Shortcuts</h1>
+
+    <div id="list-container"></div>
+
+    <script>
+        const dataList = [
+            'Ctr+C - Copy',
+            'Ctr+V - Paste',
+            'Ctr+X - Cut',
+            'Ctr+Z - Redo'
+        ];
+
+        const container = document.getElementById('list-container');
+
+
+        function insertData(list) {
+            list.forEach(item => {
+                const b = document.createElement('p');
+                b.textContent = item;
+                container.appendChild(b);
+                container.appendChild(document.createElement('br'));
+            });
+        }
+        insertData(dataList);
+    </script>
+
+
+
 </body>
 
 </html>
