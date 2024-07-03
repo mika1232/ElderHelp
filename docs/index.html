@@ -43,14 +43,20 @@
     <br><br>
     <h1> Common Shortcuts</h1>
 
-    <div id="list-container"></div>
+    <div id="list-container" class="list-container"></div>
 
     <script>
         const dataList = [
             'Ctr+C - Copy',
             'Ctr+V - Paste',
             'Ctr+X - Cut',
-            'Ctr+Z - Redo'
+            'Ctr+Z - Redo',
+            'Ctr+R - Refresh',
+            'Ctr+A - Select all',
+            'Ctr+W - Delete tab',
+            'Ctr+S - Save',
+            'Ctr+P - Print',
+            'Win+Shift+S - Print Screen'
         ];
 
         const container = document.getElementById('list-container');
@@ -60,11 +66,17 @@
             list.forEach(item => {
                 const b = document.createElement('p');
                 b.textContent = item;
+                if (item === 'tab') {
+                    alert('a')
+                    b.setAttribute('data-alt', 'djd');
+                }
                 container.appendChild(b);
             });
         }
         insertData(dataList);
     </script>
+
+    <br> <br>
 
 
 

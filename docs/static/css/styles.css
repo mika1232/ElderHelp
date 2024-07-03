@@ -58,6 +58,16 @@ form {
     text-align: center;
 }
 
+.list-container {
+    background-color: #ffffff;
+    display: inline-block;
+    padding: 10px;
+}
+
+.highlight {
+    color: red; /* Change to your desired color */
+}
+
 .bgify {
     background-color: #ffffff;
     display: inline-block;
@@ -70,4 +80,20 @@ form {
     display: inline-block;
     padding: 2px;
     border-radius: 5px;
+}
+
+/* MS Products */
+
+.msword {
+    background-color: #154eb5;
+    border-radius: 50px;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 20px;
+    cursor: pointer;
 }
