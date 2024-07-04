@@ -58,6 +58,11 @@ form {
     text-align: center;
 }
 
+.bottom {
+    background-color: #ffffff;
+    padding; 100px 100px;
+}
+
 .list-container {
     background-color: #ffffff;
     display: inline-block;
@@ -65,7 +70,32 @@ form {
 }
 
 .highlight {
-    color: red; /* Change to your desired color */
+    color: red;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: grey;
+  color: #fff;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 6px;
+
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }
 
 .bgify {

@@ -13,7 +13,8 @@
 <button class="button" onclick="MSWord()"> Microsoft Word </button>
 <button class="button" onclick="MSExcel()"> Microsoft Excel </button>
 <button class="button" onclick="MSPowerPoint()"> Microsoft Power Point </button>
-
+<br>
+<button class="button" onclick="back()" style="background-color: gray;"> Back </button>
 
 <script>
     function MSWord() {
@@ -24,6 +25,9 @@
     }
     function MSPowerPoint() {
         alert("PowePoint");
+    }
+    function back() {
+        window.location.href = "index.html";
     }
 </script>
 </body>

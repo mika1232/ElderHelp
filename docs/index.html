@@ -41,7 +41,8 @@
 
     <! SHORTCUTS>
     <br><br>
-    <h1> Common Shortcuts</h1>
+
+    <h1> <u> Common Shortcuts </u> </h1>
 
     <div id="list-container" class="list-container"></div>
 
@@ -52,6 +53,7 @@
             'Ctr+X - Cut',
             'Ctr+Z - Redo',
             'Ctr+R - Refresh',
+            'Ctr+F - Find',
             'Ctr+A - Select all',
             'Ctr+W - Delete tab',
             'Ctr+S - Save',
@@ -59,27 +61,65 @@
             'Win+Shift+S - Print Screen'
         ];
 
+        const exceptions = [
+            7,
+            10
+        ];
+
+        const exception_phrases = [
+            'A tab is the window that you see on your browser.',
+            'The "Win" (Windows) key is located on the bottom left of your keyboard.'
+        ];
+
         const container = document.getElementById('list-container');
 
 
         function insertData(list) {
             list.forEach(item => {
-                const b = document.createElement('p');
-                b.textContent = item;
-                if (item === 'tab') {
-                    alert('a')
-                    b.setAttribute('data-alt', 'djd');
+                let index = dataList.indexOf(item);
+
+                if (exceptions.includes(index)) {
+                    const b = document.createElement('div');
+                    b.setAttribute('class', 'tooltip');
+                    b.textContent = item;
+
+                    const span = document.createElement('span');
+                    span.setAttribute('class', 'tooltiptext');
+                    span.textContent = exception_phrases[exceptions.indexOf(index)];
+
+                    b.appendChild(span);
+
+                    container.appendChild(b);
+                    container.appendChild(document.createElement('br'));
+
+                } else {
+                    const b = document.createElement('p');
+                    b.textContent = item;
+
+                    container.appendChild(b);
                 }
-                container.appendChild(b);
             });
         }
         insertData(dataList);
     </script>
 
-    <br> <br>
+    <br>
+    <div class="bottom">
+        <p> Having a tough time finding the Ctr key? This probably </p>
+        <p> means that you have a MacBook or other Apple inc. </p>
+        <p> computer. This means that you will have to use the Cmd </p>
+        (Command) key on the bottom left of your keyboard.
 
+    </div>
+    <br>
+    <div style="background-color: #000000;">
+        <br>
+    </div>
+    <div style="background-color: #ffe7cc;">
+        <br>
 
-
+        <p style="text-align: left;"> Website created by Mikhail Shalashov as a part of a hackathon</p>
+    </div>
 </body>
 
 </html>
