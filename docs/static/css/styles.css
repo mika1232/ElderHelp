@@ -89,7 +89,7 @@ form {
   border-radius: 6px;
 
   position: fixed;
-  bottom: 0;
+  top: 0;
   right: 0;
   z-index: 0;
 }
