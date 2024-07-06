@@ -10,6 +10,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  background-position: center;
 }
 
 .button {
@@ -27,10 +28,12 @@ body {
 }
 
 .head {
-    color: #333;
+    color: #ffffff;
     font-family: 'Brush Script MT', cursive;
+
     font-size: 100px;
-    margin: 5px 5px;
+    margin: auto;
+    padding: 10px;
 }
 
 form {

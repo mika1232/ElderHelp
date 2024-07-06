@@ -6,13 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="static/css/styles.css">
     <title class="head">ElderHelp 1.0</title>
+    <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+    }
+    .container {
+      position: relative;
+      height: 100%;
+    }
+
+    .centered-div {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: grey;
+      padding: 20px;
+    }
+  </style>
 </head>
 
 <body>
-    <h1 class="head">ElderHelp 1.0</h1>
+    <div class="container">
+        <div class="centered-div">
+            <h1 class="head">ElderHelp 1.0</h1>
+        </div>
+    </div>
     <div class="bgify">
         <p> Are <b> you </b> in need of assistance?</p>
-        <p> We can <u>help</u>.</p>
+        <p> We can <u>help</u></p>
         <p>Just select the field that you need help in!</p>
     </div>
     <script src="static/js/scripts.js"></script>
@@ -23,13 +46,12 @@
     <br>
     <button class="button" id="IDKButton" onclick="IDK()"> I dont really know </button>
     <br> <br>
-    <div class="bgify_small"><p> Unsure what this means? Check out the guide <button class="indented_button"> here </button> </p> </div>
     <script>
         function MPJs() {
             window.location.href = "microsoft_assist.html";
         }
         function BrJS() {
-            alert('Clicked Browser');
+            window.location.href = "browser_assistance.html";
         }
         function ElseJS() {
             alert('Clicked Else');
