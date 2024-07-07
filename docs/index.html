@@ -5,14 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="static/css/styles.css">
-    <title class="head">ElderHelp 1.0</title>
+    <title class="head">ElderHelp</title>
     <style>
+
+    .fade-in {
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+    }
+
+    .fade-in.active {
+        opacity: 1;
+    }
+
     body, html {
       height: 100%;
       margin: 0;
     }
     .container {
-      position: relative;
+      position: sticky;
       height: 100%;
     }
 
@@ -25,15 +35,38 @@
       padding: 20px;
     }
 
+    .d {
+        font-size: 17px;
+        transition: font-size 0.1s;
+    }
+
+    .d:hover {
+        background-color: light-grey;
+        font-size: 19px;
+    }
+
   </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelector(".fade-in").classList.add("active");
+        });
+    </script>
 </head>
 
 <body>
-    <div class="container">
-        <div class="centered-div">
-            <h1 class="head">ElderHelp 1.0</h1>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <div class="fade-in">
+        <div class="container">
+            <div class="centered-div">
+                <h1 class="head">ElderHelp 1.0</h1>
+            </div>
         </div>
     </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
     <div class="bgify" style="z-index: 1;">
         <p> Are <b> you </b> in need of assistance?</p>
         <p> We can <u>help</u></p>
@@ -41,11 +74,11 @@
     </div>
     <script src="static/js/scripts.js"></script>
     <br> <br> <br> <br>
-    <button class="button" id="MPButton" onclick="MPJs()"> Microsoft Products </button>
+    <button class="button" id="MPButton"  onclick="MPJs()"> Microsoft Products </button>
     <button class="button" id="BrButton" onclick="BrJS()"> Browser </button>
     <button class="button" id="ElseButton" onclick="ElseJS()"> Something else </button>
-    <br>
     <button class="button" id="IDKButton" onclick="IDK()"> I dont really know </button>
+
     <br> <br>
     <script>
         function MPJs() {
@@ -64,7 +97,6 @@
 
     <! SHORTCUTS>
     <br><br>
-
     <h1> <u> Common Shortcuts </u> </h1>
 
     <div id="list-container" class="list-container"></div>
@@ -120,7 +152,7 @@
                 } else {
                     const b = document.createElement('p');
                     b.textContent = item;
-
+                    b.setAttribute('class', 'd');
                     container.appendChild(b);
                 }
             });
