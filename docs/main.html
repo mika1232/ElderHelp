@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/styles.css">
+    <title class="head">ElderHelp</title>
+    <style>
+
+    body, html {
+      height: 100%;
+      margin: 0;
+      background-color: white;
+      background-color: white;
+    }
+
+    .d {
+        font-size: 17px;
+        transition: font-size 0.1s;
+    }
+
+    .d:hover {
+        background-color: light-grey;
+        font-size: 19px;
+    }
+
+  </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelector(".fade-in").classList.add("active");
+        });
+    </script>
+</head>
+
+<body>
+
+    <br>
+    <div class="bgify" style="z-index: 1;">
+        <p> Are <b> you </b> in need of assistance?</p>
+        <p> We can <u>help</u></p>
+        <p>Just select the field that you need help in!</p>
+    </div>
+    <script src="static/js/scripts.js"></script>
+    <br> <br> <br> <br>
+    <button class="button" id="MPButton"  onclick="MPJs()"> Microsoft Products </button>
+    <button class="button" id="BrButton" onclick="BrJS()"> Browser </button>
+    <button class="button" id="ElseButton" onclick="ElseJS()"> Something else </button>
+    <button class="button" id="IDKButton" onclick="IDK()"> I dont really know </button>
+
+    <br> <br>
+    <script>
+        function MPJs() {
+            window.location.href = "microsoft_assist.html";
+        }
+        function BrJS() {
+            window.location.href = "browser_assistance.html";
+        }
+        function ElseJS() {
+            alert('Clicked Else');
+        }
+        function IDK() {
+            alert('IDK');
+        }
+    </script>
+
+    <! SHORTCUTS>
+    <br><br>
+    <h1> <u> Common Shortcuts </u> </h1>
+
+    <div id="list-container" class="list-container"></div>
+
+    <script>
+        const dataList = [
+            'Ctr+C - Copy',
+            'Ctr++ - Enlarge',
+            'Ctr+- - Decrease',
+            'Ctr+V - Paste',
+            'Ctr+X - Cut',
+            'Ctr+Z - Redo',
+            'Ctr+R - Refresh',
+            'Ctr+F - Find',
+            'Ctr+A - Select all',
+            'Ctr+W - Delete tab',
+            'Ctr+S - Save',
+            'Ctr+P - Print',
+            'Win+Shift+S - Print Screen'
+        ];
+
+        const exceptions = [
+            9,
+            12
+        ];
+
+        const exception_phrases = [
+            'A tab is the window that you see on your browser.',
+            'The "Win" (Windows) key is located on the bottom left of your keyboard.'
+        ];
+
+        const container = document.getElementById('list-container');
+
+
+        function insertData(list) {
+            list.forEach(item => {
+                let index = dataList.indexOf(item);
+
+                if (exceptions.includes(index)) {
+                    const b = document.createElement('div');
+                    b.setAttribute('class', 'tooltip');
+                    b.textContent = item;
+
+                    const span = document.createElement('span');
+                    span.setAttribute('class', 'tooltiptext');
+                    span.textContent = exception_phrases[exceptions.indexOf(index)];
+
+                    b.appendChild(span);
+
+                    container.appendChild(b);
+                    container.appendChild(document.createElement('br'));
+
+                } else {
+                    const b = document.createElement('p');
+                    b.textContent = item;
+                    b.setAttribute('class', 'd');
+                    container.appendChild(b);
+                }
+            });
+        }
+        insertData(dataList);
+    </script>
+
+    <br>
+    <HR>
+
+    <div class="bottom">
+        <p> Having a tough time finding the Ctr key? This probably </p>
+        <p> means that you have a MacBook or other Apple inc. </p>
+        <p> computer. This means that you will have to use the Cmd </p>
+        (Command) key on the bottom left of your keyboard.
+
+    </div>
+
+    <HR>
+
+    <br>
+
+    <div>
+        <p style="text-align: left;"> Website created by Mikhail Shalashov as a part of a hackathon</p>
+    </div>
+</body>
+
+</html>

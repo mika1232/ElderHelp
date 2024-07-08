@@ -5,13 +5,7 @@ body {
     text-align: center;
 }
 
-body {
-  background-image: url('img_bg.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-}
+
 
 .button {
   background-color: #78a6f5;
@@ -26,6 +20,15 @@ body {
   margin: 20px 20px;
   cursor: pointer;
   transition: width 0.5s, background-color 0.2s, font-size 0.5s;
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.fade-in.active {
+    opacity: 1;
 }
 
 .button:hover {
