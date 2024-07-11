@@ -25,6 +25,19 @@
         font-size: 19px;
     }
 
+    .sub-container {
+        box-shadow: 0px 0px 70px 0px #000000;
+        max-width: 80%;
+        margin-left: 10%;
+        border-radius: 15px;
+    }
+
+    .list-container {
+        background-color: #ffffff;
+        display: inline-block;
+        padding: 10px;
+    }
+
   </style>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
@@ -34,20 +47,20 @@
 </head>
 
 <body>
-
+    <p class="head" style="color: black; font-size: 100px; "> <b> ElderHelp 1.0 </b> </p>
     <br>
-    <div class="bgify" style="z-index: 1;">
-        <p> Are <b> you </b> in need of assistance?</p>
-        <p> We can <u>help</u></p>
-        <p>Just select the field that you need help in!</p>
+    <div class="sub-container" style="background-color: #000000;">
+        <br><br>
+        <t class="sub"> &ensp;Are <b> you </b> in need of assistance?&ensp;</t> <br><br><br><br>
+        <t class="sub" style="text-align: right;"> We can <u>help</u></t> <br><br><br><br>
+        <t class="sub">Just select the field that you need help in!</t> <br><br>
+        <script src="static/js/scripts.js"></script>
+        <br> <br> <br> <br>
+        <button class="button" id="MPButton"  onclick="MPJs()"> Microsoft Products </button>
+        <button class="button" id="BrButton" onclick="BrJS()"> Browser </button>
+        <button class="button" id="ElseButton" onclick="ElseJS()"> Something else </button>
+        <button class="button" id="IDKButton" onclick="IDK()"> I dont really know </button>
     </div>
-    <script src="static/js/scripts.js"></script>
-    <br> <br> <br> <br>
-    <button class="button" id="MPButton"  onclick="MPJs()"> Microsoft Products </button>
-    <button class="button" id="BrButton" onclick="BrJS()"> Browser </button>
-    <button class="button" id="ElseButton" onclick="ElseJS()"> Something else </button>
-    <button class="button" id="IDKButton" onclick="IDK()"> I dont really know </button>
-
     <br> <br>
     <script>
         function MPJs() {
@@ -66,9 +79,11 @@
 
     <! SHORTCUTS>
     <br><br>
-    <h1> <u> Common Shortcuts </u> </h1>
+    <div class="list-div" style="font-family: Monospace, Monaco;">
+        <h1> <u> Common Shortcuts </u> </h1>
 
-    <div id="list-container" class="list-container"></div>
+        <div id="list-container" class="list-container"></div>
+    </div>
 
     <script>
         const dataList = [
@@ -112,7 +127,7 @@
                     const span = document.createElement('span');
                     span.setAttribute('class', 'tooltiptext');
                     span.textContent = exception_phrases[exceptions.indexOf(index)];
-
+                    span.setAttribute('style', 'font-family: Sans-serif, Verdana;');
                     b.appendChild(span);
 
                     container.appendChild(b);
@@ -132,7 +147,7 @@
     <br>
     <HR>
 
-    <div class="bottom">
+    <div class="bottom" style="font-family: Monospace, Monaco;">
         <p> Having a tough time finding the Ctr key? This probably </p>
         <p> means that you have a MacBook or other Apple inc. </p>
         <p> computer. This means that you will have to use the Cmd </p>
@@ -145,7 +160,7 @@
     <br>
 
     <div>
-        <p style="text-align: left;"> Website created by Mikhail Shalashov as a part of a hackathon</p>
+        <p style="text-align: left; font-size: 10px;"> Website created by Mikhail Shalashov as a part of a hackathon</p>
     </div>
 </body>
 

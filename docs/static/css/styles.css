@@ -5,10 +5,15 @@ body {
     text-align: center;
 }
 
-
+.sub {
+    font-size: 50px;
+    font-family: Fantasy, Copperplate;
+    text-align: left;
+    color: white;
+}
 
 .button {
-  background-color: #78a6f5;
+  background-color: #ffffff;
   border-radius: 50px;
   border: none;
   color: black;
@@ -41,7 +46,6 @@ body {
 .head {
     color: #ffffff;
     font-family: 'Brush Script MT', cursive;
-
     font-size: 100px;
     margin: auto;
     padding: 10px;
@@ -84,11 +88,7 @@ form {
     padding; 100px 100px;
 }
 
-.list-container {
-    background-color: #ffffff;
-    display: inline-block;
-    padding: 10px;
-}
+
 
 .highlight {
     color: red;
@@ -119,19 +119,6 @@ form {
   visibility: visible;
 }
 
-.bgify {
-    background-color: #ffffff;
-    display: inline-block;
-    padding: 20px;
-    border-radius: 15px;
-}
-
-.bgify_small {
-    background-color: #ffffff;
-    display: inline-block;
-    padding: 2px;
-    border-radius: 5px;
-}
 
 /* MS Products */
 
