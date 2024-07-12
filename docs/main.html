@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="static/css/styles.css">
     <title class="head">ElderHelp</title>
+    <link rel="icon" href="docs/logo.ico" type="image/x-icon">
     <style>
 
     body, html {
@@ -15,14 +16,25 @@
       background-color: white;
     }
 
+    .bottom {
+        background-color: #ffffff;
+        padding; 100px 100px;
+        max-width: 60%;
+        margin: auto;
+        z-index: 1;
+    }
+
     .d {
         font-size: 17px;
-        transition: font-size 0.1s;
+        transition: font-size 0.1s text-decoration 0.2s;
+        text-decoration: none;
+        z-index: 2;
     }
 
     .d:hover {
         background-color: light-grey;
         font-size: 19px;
+        text-decoration: underline;
     }
 
     .sub-container {
@@ -81,7 +93,7 @@
     <! SHORTCUTS>
     <br><br>
     <div class="list-div" style="font-family: Monospace, Monaco;">
-        <h1> <u> Common Shortcuts </u> </h1>
+        <h1 style="z-index: 1;"> <u> Common Shortcuts </u> </h1>
 
         <div id="list-container" class="list-container"></div>
     </div>
@@ -146,10 +158,10 @@
     </script>
 
     <br>
-    <HR style="border-top: dotted 2px;">
+    <HR style="border-top: dotted 2px; z-index: 0;">
 
     <div class="bottom" style="font-family: Monospace, Monaco; font-size: 12px;">
-        <p> Having a tough time finding the Ctr key? This probably
+        <p style="z-index: 1;"> Having a tough time finding the Ctr key? This probably
         means that you have a MacBook or other Apple inc.
         computer. This means that you will have to use the CMD
         (Command) key on the bottom left of your keyboard.
