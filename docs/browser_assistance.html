@@ -12,36 +12,39 @@
 <br>
 <HR>
 <p style="font-family: Monospace, Monaco; font-size: 15px;"> Google Chrome </p>
-<img src="data/images/GC.png" width=70%>
+<img src="data/images/GC.png" onclick="GoogleChrome()" width=70%>
 <br>
 <HR>
-<p style="font-family: Monospace, Monaco; font-size: 15px;"> Microsoft Edge </p>
+<p style="font-family: Monospace, Monaco; font-size: 15px;" onclick="MSEdge()"> Microsoft Edge </p>
 <img src="data/images/ME.png" width=70%>
 <br>
 <HR>
-<p style="font-family: Monospace, Monaco; font-size: 15px;"> Opera </p>
+<p style="font-family: Monospace, Monaco; font-size: 15px;" onclick="Opera()"> Opera </p>
 <img src="data/images/OP.png" width=70%>
 <br>
 <HR>
-<p style="font-family: Monospace, Monaco; font-size: 15px;"> Mozilla Firefox </p>
+<p style="font-family: Monospace, Monaco; font-size: 15px;" onclick="MozillaFirefox()"> Mozilla Firefox </p>
 <img src="data/images/MF.png" width=70%>
 
 
 <br>
 <button class="button" onclick="back()" style="background-color: gray; color: white;"> Back </button>
+<br><br>
+
+<p style="font-family: Monospace, Monaco; font-size: 15px;"> Please keep in mind that this only works for devices with a keyboard.</p>
 
 <script>
-    function MSWord() {
-        window.location.href = "word.html";
+    function GoogleChrome() {
+        window.location.href = "GC.html";
     }
-    function MSExcel() {
-        window.location.href = "excel.html";
+    function MSEdge() {
+        window.location.href = "ME.html";
     }
-    function MSPowerPoint() {
-        window.location.href = "power_point.html";
+    function MozillaFirefox() {
+        window.location.href = "MF.html";
     }
-    function back() {
-        window.location.href = "main.html";
+    function Opera() {
+        window.location.href = "OP.html";
     }
 </script>
 </body>
