@@ -1,33 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body, html {
-      height: 100%;
-      margin: 0;
-    }
-
-    .container {
-      position: relative;
-      height: 100%;
-    }
-
-    .centered-div {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: lightcoral;
-      padding: 20px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/styles.css">
+    <title>Browser Assistance</title>
 </head>
 <body>
-  <div class="container">
-    <div class="centered-div">Centered Content</div>
-  </div>
-  <br> <br> <br> Lorem ipsum dolor sit amet
+<h1 style="font-family: Monospace, Monaco; font-size: 60px;"> Browser Assistance</h1>
+<p style="font-family: Monospace, Monaco; font-size: 20px;"> Please click the screen that you see right now </p>
+<br>
+<HR>
+<p style="font-family: Monospace, Monaco; font-size: 15px;"> Google Chrome </p>
+<img src="data/images/GC.png" width=70%>
+<br>
+<HR>
+<p style="font-family: Monospace, Monaco; font-size: 15px;"> Microsoft Edge </p>
+<img src="data/images/ME.png" width=70%>
+<br>
+<HR>
+<p style="font-family: Monospace, Monaco; font-size: 15px;"> Opera </p>
+<img src="data/images/OP.png" width=70%>
+<br>
+<HR>
+<p style="font-family: Monospace, Monaco; font-size: 15px;"> Mozilla Firefox </p>
+<img src="data/images/MF.png" width=70%>
+
+
+<br>
+<button class="button" onclick="back()" style="background-color: gray; color: white;"> Back </button>
+
+<script>
+    function MSWord() {
+        window.location.href = "word.html";
+    }
+    function MSExcel() {
+        window.location.href = "excel.html";
+    }
+    function MSPowerPoint() {
+        window.location.href = "power_point.html";
+    }
+    function back() {
+        window.location.href = "main.html";
+    }
+</script>
 </body>
 </html>
